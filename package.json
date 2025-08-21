@@ -1,0 +1,24 @@
+{
+  "name": "slack-exporter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "bin": {
+    "slack-exporter": "bin/cli.js"
+  },
+  "scripts": {
+    "dev": "nodemon --ignore exports/ src/gui/server.js"
+  },
+  "dependencies": {
+    "@slack/web-api": "^7.0.0",
+    "axios": "^1.7.7",
+    "express": "^4.19.2",
+    "fs-extra": "^11.2.0",
+    "mkdirp": "^3.0.1",
+    "p-limit": "^3.1.0",
+    "yargs": "^18.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
