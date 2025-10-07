@@ -5,7 +5,7 @@ const path = require("path");
 const fse = require("fs-extra");
 
 const app = express();
-const PORT = Number(process.env.PORT || process.env.GUI_PORT || 5173);
+const PORT = Number(process.env.PORT || 5187);
 
 // Determine exports root
 // When running via "npm run gui" from exports/, cwd is exports/ and this file is at gui/server.js

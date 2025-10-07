@@ -95,7 +95,24 @@ slack-exporter \
 
 Produces `whoami.json`, `summary.json`, and one JSON per conversation in `./exports/{team-name}/`. Files, avatars, and emojis are downloaded by default and saved under `./exports/{team-name}/files/<conversation>__<id>/`, `./exports/{team-name}/avatars/`, and `./exports/{team-name}/emojis/`. File metadata is automatically included in the JSON when files are downloaded. If your token lacks `files:read`, the exporter will skip downloading files (to avoid saving HTML error pages) and continue exporting messages normally.
 
-When using the GUI (`npm run gui`), avatars and custom emojis are rendered if they exist in the exports directory (downloaded by default unless skipped with `--skip-avatars` or `--skip-emojis`). Some standard emoji shortcodes (e.g., `:joy:`) are rendered as Unicode.
+## GUI Viewer
+
+After exporting, you can view your messages in a web interface:
+
+```bash
+cd exports
+npm run gui
+```
+
+The GUI will start on **port 5187** by default. Open http://localhost:5187 in your browser.
+
+To use a different port, set the `PORT` or `GUI_PORT` environment variable:
+
+```bash
+PORT=3000 npm run gui
+```
+
+When using the GUI, avatars and custom emojis are rendered if they exist in the exports directory (downloaded by default unless skipped with `--skip-avatars` or `--skip-emojis`). Some standard emoji shortcodes (e.g., `:joy:`) are rendered as Unicode.
 
 Date filtering with `--since`:
 
